@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>WHEEL BIRTHDAY DAHLIA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+    <div id="password-screen">
+        <h1>WHEEL BIRTHDAY DAHLIA</h1>
+        <p>Insert password for play game:</p>
+        <input type="password" id="password" placeholder="Password..." />
+        <button onclick="checkPassword()">Entra</button>
+    </div>
+
+    <div id="wheel-container" style="display:none; position: relative;">
+        <div id="popup-images"></div>
+        <canvas id="canvas" width="500" height="500"></canvas>
+        <button id="spin-btn" onclick="spinWheel()">Turn the wheel 🎉</button>
+        <p id="result"></p>
+        <audio id="audio" src="{{ url_for('static', filename='audio.mp3') }}"></audio>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/zarocknz/javascript-winwheel@master/Winwheel.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+body {
+    background-color: #111;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#wheel-container {
+    width: 500px;
+    height: 500px;
+    position: relative;
+}
+
+#popup-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+#popup-images img {
+    position: absolute;
+    opacity: 0.3;
+    transition: opacity 0.3s ease;
+    user-select: none;
+    max-width: 150px;
+    max-height: 150px;
+}
+
+#canvas {
+    position: relative;
+    z-index: 2;
+}
+
+#spin-btn {
+    position: relative;
+    z-index: 3;
+}
